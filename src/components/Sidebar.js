@@ -1,5 +1,5 @@
 import React from "react";
-import {Drawer, List as MuiList, ListItemButton, ListItemIcon, ListItemText, Stack} from "@mui/material";
+import {Box, Drawer, List as MuiList, ListItemButton, ListItemIcon, ListItemText, Stack} from "@mui/material";
 import {Home, Pets} from "@mui/icons-material";
 import {ExpandCircleDownOutlined} from "@mui/icons-material";
 import {useNavigate} from "react-router-dom";
@@ -40,7 +40,8 @@ export default function Sidebar( {drawerOpen, drawerToggle, drawerTransition, dr
 	}
 
 	return <Drawer hideBackdrop={true} open={drawerOpen} variant="permanent" PaperProps={{sx: {zIndex: 0 } }}>
-		<Stack sx={{ flex: 1, mt: 8, width: drawerWidth, overflow: 'hidden', ...drawerTransition, transitionProperty: 'width'}}>
+		<Box component='nav' sx={{bgcolor: 'primary', height: '64px'}} />
+		<Stack sx={{ flex: 1, width: drawerWidth, overflow: 'hidden', ...drawerTransition, transitionProperty: 'width'}}>
 			<List sx={{overflow: 'auto'}}>
 				<SidebarBtn Icon={Home} label={'Home'} to='/'/>
 				<SidebarBtn Icon={Pets} label={'Doghouse'} to='/dog' />

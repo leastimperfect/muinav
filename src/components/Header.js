@@ -6,7 +6,7 @@ import {Button} from "@mui/material";
 import {Link as RouterLink} from 'react-router-dom';
 
 export default function Header() {
-	return <Box>
+	return <Box component='header'>
 		<AppBar position="relative" elevation={1} sx={{zIndex: 1 }}>
 			<Toolbar>
 
