@@ -7,13 +7,14 @@ import {Link as RouterLink} from 'react-router-dom';
 
 export default function Header() {
 	return <Box>
-		<AppBar position="relative" elevation={1} sx={{zIndex: 1}}>
-			<Toolbar variant="dense">
+		<AppBar position="relative" elevation={1} sx={{zIndex: 1 }}>
+			<Toolbar>
+
 				<Typography variant="h6" sx={{flexGrow: 1}}>
 					cra-template-muinav
 				</Typography>
 
-				<Button color="inherit" edge="end" component={RouterLink} to="/sign-in">
+				<Button color="inherit" edge="end" component={RouterLink} to="/signin">
 					Sign in
 				</Button>
 
